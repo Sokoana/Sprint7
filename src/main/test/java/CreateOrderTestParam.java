@@ -1,4 +1,4 @@
-import Constans.OrdersConts;
+import Constans.OrdersData;
 import Constans.URL;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
-public class CreateOrderTestParam extends BasicTest{
+public class CreateOrderTestParam extends BasicTestOrder{
     private OrdersConts order;
 
 
