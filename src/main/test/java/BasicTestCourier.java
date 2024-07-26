@@ -1,5 +1,5 @@
-import Constans.CourierConst;
-import Constans.OrdersConts;
+import Constans.CourierData;
+import Constans.OrdersData;
 import Constans.URL;
 import io.qameta.allure.Step;
 import io.restassured.RestAssured;
