@@ -14,7 +14,7 @@ import org.junit.Test;
 
 
 public class LoginCourierTest extends BasicTestCourier{
-    private CourierConst courier;
+    private CourierData courier;
 
 
     private final String login = "123000qq";
@@ -26,7 +26,7 @@ public class LoginCourierTest extends BasicTestCourier{
     public void createCourier() {
 
         String firstName = "123";
-        courier = new CourierConst(login, password, firstName);
+        courier = new CourierData(login, password, firstName);
         sendPostRequest(URL.COURIER_CREATE, courier);
     }
 
