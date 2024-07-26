@@ -24,7 +24,7 @@ public class CreateCourierTest extends BasicTestCourier{
     @DisplayName("Courier  created")
 
     public void courierCreatedTest() {
-        courier = new CourierConst(login, password, firstName);
+        courier = new CourierData(login, password, firstName);
         Response response = sendPostRequest(URL.COURIER_CREATE, courier);
         checkResponseCode(response, 201);
         validateResponseBody(response, "ok", true);
@@ -34,7 +34,7 @@ public class CreateCourierTest extends BasicTestCourier{
     @DisplayName("Courier  create without firstName")
 
     public void courierCreatedWithoutFirstNameTest() {
-        courier = new CourierConst();
+        courier = new CourierData();
         courier.setLogin(login);
         courier.setPassword(password);
         Response response = sendPostRequest(URL.COURIER_CREATE, courier);
@@ -45,7 +45,7 @@ public class CreateCourierTest extends BasicTestCourier{
     @DisplayName("Courier  create without password")
 
     public void courierCreatedWithoutPasswordTest() {
-        courier = new CourierConst();
+        courier = new CourierData();
         courier.setLogin(login);
         courier.setFirstName(firstName);
         Response response = sendPostRequest(URL.COURIER_CREATE, courier);
@@ -56,7 +56,7 @@ public class CreateCourierTest extends BasicTestCourier{
     @Test
 
     public void courierCreatedWithoutLoginTest() {
-        courier = new CourierConst();
+        courier = new CourierData);
         courier.setPassword(password);
         courier.setFirstName(firstName);
         Response response = sendPostRequest(URL.COURIER_CREATE, courier);
@@ -71,7 +71,7 @@ public class CreateCourierTest extends BasicTestCourier{
 
         courier = new CourierConst(login, password, firstName);
         sendPostRequest(URL.COURIER_CREATE, courier);
-        CourierConst newCourier = new CourierConst(login, RandomStringUtils
+        CourierData newCourier = new CourierConst(login, RandomStringUtils
                 .random(7, true, true), RandomStringUtils.randomAlphabetic(7));
         Response response = sendPostRequest(URL.COURIER_CREATE, newCourier);
         checkResponseCode(response, 409);
