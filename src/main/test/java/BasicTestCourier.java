@@ -19,7 +19,7 @@ import org.junit.Assert;
 
 import java.util.List;
 
-public abstract class BasicTest {
+public abstract class BasicTestCouriet {
     RestAssuredConfig config = RestAssured.config()
             .httpClient(HttpClientConfig.httpClientConfig()
                     .setParam("http.socket.timeout",40000)
@@ -90,7 +90,7 @@ public abstract class BasicTest {
 
     @Step("Login as courier with login and password")
     protected Response loginAsCourier(String login, String password) {
-        CourierConst courier = new CourierConst();
+        CourierData courier = new CourierData();
         courier.setLogin(login);
         courier.setPassword(password);
         return given()
@@ -127,7 +127,7 @@ public abstract class BasicTest {
 
 
     @Step("Delete courier")
-    protected void deleteCourier(CourierConst courier) {
+    protected void deleteCourier(CourierData courier) {
         Response response = loginAsCourier(courier.getLogin(), courier.getPassword());
         Integer id = getCourierId(response);
         deleteCourier(id);
@@ -135,23 +135,6 @@ public abstract class BasicTest {
 
 
 
-    @Step("Get order track ")
-    protected Integer getOrderTrack(Response response) {
-        return response
-                .then()
-                .extract()
-                .body()
-                .path("track");
-    }
-
-    @Step("Get  list orders")
-    protected List<String> getOrdersList(Response response) {
-        return response
-                .then()
-                .extract()
-                .body()
-                .path("orders");
-    }
 
 
 
