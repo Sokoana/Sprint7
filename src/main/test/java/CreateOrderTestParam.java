@@ -47,7 +47,7 @@ public class CreateOrderTestParam extends BasicTestOrder{
     @DisplayName("Order  create with 2 colors ")
 
     public void orderWithAnyColorTest() {
-        order = new OrdersConts(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, color);
+        order = new OrdersData(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, color);
         Response response = sendPostRequest(URL.ORDERS_CREATE, order);
         checkResponseCode(response, 201);
         Integer track = getOrderTrack(response);
