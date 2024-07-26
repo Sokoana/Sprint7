@@ -1,4 +1,4 @@
-import Constans.CourierConst;
+import Constans.CourierData;
 import Constans.URL;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
@@ -13,7 +13,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 
-public class LoginCourierTest extends BasicTest{
+public class LoginCourierTest extends BasicTestCourier{
     private CourierConst courier;
 
 
