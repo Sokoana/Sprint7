@@ -12,7 +12,7 @@ import io.qameta.allure.junit4.DisplayName; // импорт DisplayName
 
 import io.qameta.allure.Description; // импорт Description
 
-public class CreateCourierTest extends BasicTest{
+public class CreateCourierTest extends BasicTestCourier{
     private CourierConst courier;
 
 
