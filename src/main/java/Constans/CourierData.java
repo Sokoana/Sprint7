@@ -1,14 +1,14 @@
 package Constans;
 
-public class CourierConst {
+public class CourierData {
     private String login;
     private String password;
     private String firstName;
 
-    public CourierConst() {
+    public CourierData() {
     }
 
-    public CourierConst(String login, String password, String firstName) {
+    public CourierData(String login, String password, String firstName) {
         this.login = login;
         this.password = password;
         this.firstName = firstName;
