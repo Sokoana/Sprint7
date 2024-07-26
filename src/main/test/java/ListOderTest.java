@@ -9,7 +9,7 @@ import io.qameta.allure.junit4.DisplayName; // импорт DisplayName
 
 import java.util.List;
 
-public class ListOderTest extends BasicTest{
+public class ListOderTest extends BasicTestOrder{
     @Test
     @DisplayName("Get Orders  list")
     public void getOrdersList() {
