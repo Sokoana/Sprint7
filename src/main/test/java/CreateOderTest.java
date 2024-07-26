@@ -7,7 +7,7 @@ import org.junit.Test;
 import io.qameta.allure.junit4.DisplayName; // импорт DisplayName
 
 public class CreateOderTest extends BasicTestOrder{
-    private OrdersConts order;
+    private OrdersData order;
 
 
     private String firstName = "NewFirstName";
@@ -25,7 +25,7 @@ public class CreateOderTest extends BasicTestOrder{
     @DisplayName("Order  create with 2 colors ")
 
     public void orderCouldBeCreatedWith2ColorsTest() {
-        order = new OrdersConts(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, color);
+        order = new OrdersData(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment, color);
         Response response = sendPostRequest(URL.ORDERS_CREATE, order);
         checkResponseCode(response, 201);
         Integer track = getOrderTrack(response);
@@ -36,7 +36,7 @@ public class CreateOderTest extends BasicTestOrder{
     @DisplayName("Order  create without color ")
 
     public void orderCouldBeCreatedWithoutColorTest() {
-        order = new OrdersConts(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment);
+        order = new OrdersData(firstName, lastName, address, metroStation, phone, rentTime, deliveryDate, comment);
         Response response = sendPostRequest(URL.ORDERS_CREATE, order);
         checkResponseCode(response, 201);
         Integer track = getOrderTrack(response);
