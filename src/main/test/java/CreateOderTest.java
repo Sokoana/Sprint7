@@ -1,4 +1,4 @@
-import Constans.OrdersConts;
+import Constans.OrdersData;
 import Constans.URL;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import io.qameta.allure.junit4.DisplayName; // импорт DisplayName
 
-public class CreateOderTest extends BasicTest{
+public class CreateOderTest extends BasicTestOrder{
     private OrdersConts order;
 
 
