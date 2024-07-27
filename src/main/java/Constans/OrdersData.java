@@ -1,6 +1,6 @@
 package Constans;
 
-public class OrdersConts { private String firstName;
+public class OrdersData { private String firstName;
     private String lastName;
     private String address;
     private String metroStation;
@@ -10,10 +10,10 @@ public class OrdersConts { private String firstName;
     private String comment;
     private String[] color;
 
-    public OrdersConts() {
+    public OrdersData() {
     }
 
-    public OrdersConts(String firstName, String lastName, String address, String metroStation, String phone, int rentTime,
+    public OrdersData(String firstName, String lastName, String address, String metroStation, String phone, int rentTime,
                   String deliveryDate, String comment, String[] color) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -26,7 +26,7 @@ public class OrdersConts { private String firstName;
         this.color = color;
     }
 
-    public OrdersConts(String firstName, String lastName, String address, String metroStation, String phone, int rentTime,
+    public OrdersData(String firstName, String lastName, String address, String metroStation, String phone, int rentTime,
                   String deliveryDate, String comment) {
         this.firstName = firstName;
         this.lastName = lastName;
