@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 @RunWith(Parameterized.class)
 public class CreateOrderTestParam extends BasicTestOrder{
-    private OrdersConts order;
+    private OrdersData order;
 
 
     private final String firstName;
